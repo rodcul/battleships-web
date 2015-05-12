@@ -1,18 +1,16 @@
 <form action = '/ship' method = 'post'>
-  <p>Input your coordinate (C1, B5...)</p>
+  <p>Place a ship (C1, B5...)
   <input type = 'text' name = 'coordinate'>
-  <br>
+    <input type="radio" name="orientation" value="horizontally" checked>Horizontal
+    <input type="radio" name="orientation" value="vertically">Vertical
 
-    <input type="radio" name="orientation" value="horizontally" checked>Horizontal<br>
-    <input type="radio" name="orientation" value="vertically">Vertical<br>
-
-  <input type = submit>
+    <input type = "submit" value = "Place a ship">
   </form>
 <hr>
 <form action = '/fire' method = 'post'>
-  <p>Input your coordinate (C1, B5...)
+  <p>Fire a shot (C1, B5...)
   <input type = 'text' name = 'coordinate'>
-  <input type = submit>
+  <input type = "submit" value = "FIRE!">
   </form>
 <hr>
 

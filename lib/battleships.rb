@@ -35,12 +35,14 @@ class BattleShipsApp < Sinatra::Base
   post '/fire' do
     @coordinate = params['coordinate'].capitalize
     @@game.player_2.shoot @coordinate.to_sym
+    @haveiwon = @@game.player_2.winner?
 
     @board = @@game.own_board_view @@game.player_1
     erb :fire
   end
 
   get '/fire' do
+    @haveiwon = @@game.player_2.winner?
     @board = @@game.own_board_view @@game.player_1
     erb :fire
   end
