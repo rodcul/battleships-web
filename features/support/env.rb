@@ -8,7 +8,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = BattleShips
+Capybara.app = BattleShipsApp
 
 class BattleShipsWorld
   include Capybara::DSL
